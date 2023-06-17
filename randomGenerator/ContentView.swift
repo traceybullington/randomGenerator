@@ -1,21 +1,23 @@
 //
 //  ContentView.swift
 //  randomGenerator
-//
+//Claire taugh me this
 //  Created by scholar on 6/15/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @State var thisEmoji = String()
     var body: some View {
+        let animalEmoji = [ "👻", "🐒", "🦋", "🦊"]
+        
+        let randomAnimal = animalEmoji.randomElement()
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text(randomAnimal!)
         }
-        .padding()
+
     }
 }
 
